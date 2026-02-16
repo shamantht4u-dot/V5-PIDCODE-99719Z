@@ -9,11 +9,11 @@ brain=Brain()
 # Robot configuration code
 left_motor_a = Motor(Ports.PORT9, GearSetting.RATIO_18_1, False)
 left_motor_b = Motor(Ports.PORT10, GearSetting.RATIO_18_1, False)
-left_drive_smart = MotorGroup(left_motor_a, left_motor_b)
+left_motor_group = MotorGroup(left_motor_a, left_motor_b)
 right_motor_a = Motor(Ports.PORT19, GearSetting.RATIO_18_1, True)
 right_motor_b = Motor(Ports.PORT20, GearSetting.RATIO_18_1, True)
-right_drive_smart = MotorGroup(right_motor_a, right_motor_b)
-drivetrain = DriveTrain(left_drive_smart, right_drive_smart, 319.19, 295, 40, MM, 0.25)
+right_motor_group = MotorGroup(right_motor_a, right_motor_b)
+drivetrain = DriveTrain(left_motor_group, right_motor_group, 319.19, 295, 40, MM, 0.25)
 inertial_15 = Inertial(Ports.PORT15)
 
 
