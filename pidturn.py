@@ -25,9 +25,9 @@ from vex import *
 def inertial_turn(target_heading):
     actual_heading = inertial_15.heading()
     error = target_heading - actual_heading
-    Kp = 1
-    Ki = 0
-    Kd = 0
+    Kp = 1 #Tune these values for precise turns and reduces oscillation, set it to these values at first and then tune it
+    Ki = 0 #Tune these values for precise turns and reduces oscillation, set it to these values at first and then tune it
+    Kd = 0 #Tune these values for precise turns and reduces oscillation, set it to these values at first and then tune it
     tolerance = 2
     integral = 0
     previous_error = error
